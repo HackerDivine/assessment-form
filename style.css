@@ -1,0 +1,229 @@
+body p:first-child{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: 2.3rem;
+}
+
+
+.top-header{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1rem;
+    margin-top: 4rem ;
+    margin-bottom: 3rem;
+}
+.top-header .name{
+    border: none;
+    border-bottom: 1px solid black;
+}
+.top-header .date{
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 5px;
+}
+
+.top-header-left{
+    width: 80%;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(81, 82, 82);
+}
+
+.top-header-right{
+    margin-right: 2.9rem;
+}
+
+
+
+table {
+    width: 95%;
+    border-collapse: collapse;
+    justify-content: center;
+    margin-left: 1rem;
+}
+
+th, td {
+    color: rgb(81, 82, 82);
+    border: none;
+    padding: 8px;
+    text-align: left;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+}
+th {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 11px;
+    background-color: #f2f2f2;
+   
+}
+
+
+
+.total-row, .section-total {
+    
+}
+.header-section {
+    margin-top: 20px;
+}
+
+
+
+table tbody {
+   position: relative;
+   top: 1rem;
+    
+}
+tbody td{
+    border: none ;
+    /* border-bottom: 1px solid rgb(130, 21, 21); */
+    padding: 15px;
+    
+}
+tbody td:first-child{
+    width: 0;
+    /* border-right: 1px solid black; */
+}
+
+tbody .total-row{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+   color: rgb(77, 59, 59);
+}
+
+select{
+   border: none;
+   background-color: #f2f2f2;
+   padding: 2px;
+   font-size: 12px;
+   outline: none;
+}
+
+
+table{
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+.section-heading{
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   margin-bottom: -4rem;
+   padding-left: 1rem;
+   color: rgb(57, 46, 46);
+}
+.recommend{
+    border: none;
+}
+input{
+    outline: none;
+}
+
+
+/* Base styles for larger screens */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-header-left {
+    width: 70%;
+}
+
+.top-header-right img {
+    width: 5rem;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    body p:first-child{
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+       font-size: 1.3rem;
+    }
+
+    .top-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .top-header-left, .top-header-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .top-header-right img {
+        width: 3.5rem;
+        margin-top: 15px;
+    }
+
+    table {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+    
+    .total-row {
+        font-size: 14px;
+    }
+
+    .section-heading {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .top-header-left label,
+    .top-header-left input,
+    .top-header-left p,
+    .section-heading {
+        display: block;
+        width: 100%;
+    }
+
+    .top-header-right img {
+        width: 3rem;
+        margin-top: 20px;
+    }
+
+    table {
+        width: 100%;
+        font-size: 10px;
+    }
+
+    th, td {
+       
+        text-align: left;
+        font-size: 11px;
+    }
+
+    .section-heading {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    
+
+    /* Adjust input elements */
+    select, input[type="text"], input[type="date"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .section-heading{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin-bottom: -4rem;
+        color: rgb(57, 46, 46);
+        font-size: 12px;
+     }
+}
+
+
+

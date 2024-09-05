@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Assessment Form</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <p>Buying Temperature Assessment Form (Version 1)</p>
+
+    <!-- Client Information -->
+    <div class="top-header">
+         <div class="top-header-left">
+            <label for="clientName">Name of Client:</label>
+            <input type="text" id="clientName" name="clientName" class="name">
+            <br><br>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" class="date">
+            <p>Pick the correct option from the drop down under "MARKETER RATING" and discuss the outcome of each stage with your UNIT MANAGER for next steps.</p>
+    
+         </div>
+         <div class="top-header-right">
+            <img src="./Thebossoffice.png" alt="" style="width: 5rem;">
+         </div>
+    </div>
+    
+
+    <!-- Client Trust in the Real Estate Advisor -->
+   
+    <table>
+        <p class="section-heading">CLIENT TRUST IN THE REAL ESTATE ADVISOR</p>
+        <thead>
+            <tr>
+                <th>Prospect Stages</th>
+                <th>Assessment Questions</th>
+                <th>Self Rating</th>
+                <th>Self Score</th>
+            </tr>
+        </thead>
+        <tbody id="advisorTable">
+            <!-- Question Rows -->
+            <tr>
+                <td>1</td>
+                <td>Do you know where the client hangs out with his friends?</td>
+                <td>
+                    <select id="q1rating" name="q1rating" onchange="calculateScore()">
+                        <option value="0">No </option>
+                        <option value="1">Not sure </option>
+                        <option value="2">Yes (50%) </option>
+                        <option value="3">Yes (100%) </option>
+                    </select>
+                </td>
+                <td><input type="text" id="q1score" name="q1score" readonly></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Is the client married?</td>
+                <td>
+                    <select id="q2rating" name="q2rating" onchange="calculateScore()">
+                        <option value="0">No </option>
+                        <option value="1">Not sure </option>
+                        <option value="2">Yes (50%) </option>
+                        <option value="3">Yes (100%) </option>
+                    </select>
+                </td>
+                <td><input type="text" id="q2score" name="q2score" readonly></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Do you know his/her spouse's name?</td>
+                <td>
+                    <select id="q3rating" name="q3rating" onchange="calculateScore()">
+                        <option value="0">No </option>
+                        <option value="1">Not sure </option>
+                        <option value="2">Yes (50%) </option>
+                        <option value="3">Yes (100%) </option>
+                    </select>
+                </td>
+                <td><input type="text" id="q3score" name="q3score" readonly></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Do you know the occupation of the client?</td>
+                <td>
+                    <select id="q4rating" name="q4rating" onchange="calculateScore()">
+                        <option value="0">No </option>
+                        <option value="1">Not sure </option>
+                        <option value="2">Yes (50%) </option>
+                        <option value="3">Yes (100%) </option>
+                    </select>
+                </td>
+                <td><input type="text" id="q4score" name="q4score" readonly></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Do you know the best time the client receives money?</td>
+                <td>
+                    <select id="q5rating" name="q5rating" onchange="calculateScore()">
+                        <option value="0">No </option>
+                        <option value="1">Not sure </option>
+                        <option value="2">Yes (50%) </option>
+                        <option value="3">Yes (100%) </option>
+                    </select>
+                </td>
+                <td><input type="text" id="q5score" name="q5score" readonly></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Does the client know your surname?</td>
+                <td>
+                    <select id="q6rating" name="q6rating" onchange="calculateScore()">
+                        <option value="0">No </option>
+                        <option value="1">Not sure </option>
+                        <option value="2">Yes (50%) </option>
+                        <option value="3">Yes (100%) </option>
+                    </select>
+                </td>
+                <td><input type="text" id="q6score" name="q6score" readonly></td>
+            </tr>
+            <tr>
+                <td colspan="3" class="total-row">Total for CLIENT TRUST IN THE REAL ESTATE ADVISOR:</td>
+                <td><input type="text" id="totalAdvisor" name="totalAdvisor" readonly></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Client Trust in the Product -->
+    <p class="section-heading">CLIENT TRUST IN THE PRODUCT</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Prospecting Stages</th>
+                <th>Assessment Questions</th>
+                <th>Self Rating</th>
+                <th>Self Score</th>
+            </tr>
+        </thead>
+        <tbody id="productTable">
+            <!-- Question Rows -->
+            <tr>
+                <td>1</td>
+                <td>Has the client gone for site inspection?</td>
+                <td>
+                    <select id="q7rating" name="q7rating" onchange="calculateScore()">
+                        <option value="0">No </option>
+                        <option value="1">Not sure </option>
+                        <option value="2">Yes (50%)</option>
+                        <option value="3">Yes (100%) </option>
+                    </select>
+                </td>
+                <td><input type="text" id="q7score" name="q7score" readonly></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Did he go with a friend/family member?</td>
+                <td>
+                    <select id="q8rating" name="q8rating" onchange="calculateScore()">
+                        <option value="0">No </option>
+                        <option value="1">Not sure </option>
+                        <option value="2">Yes (50%)</option>
+                        <option value="3">Yes (100%) </option>
+                    </select>
+                </td>
+                <td><input type="text" id="q8score" name="q8score" readonly></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Did he take any pictures during the site visit?</td>
+                <td>
+                    <select id="q9rating" name="q9rating" onchange="calculateScore()">
+                        <option value="0">No </option>
+                        <option value="1">Not sure </option>
+                        <option value="2">Yes (50%)</option>
+                        <option value="3">Yes (100%) </option>
+                    </select>
+                </td>
+                <td><input type="text" id="q9score" name="q9score" readonly></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Has he/she told any of his trusted allies about the property?</td>
+                <td>
+                    <select id="q10rating" name="q10rating" onchange="calculateScore()">
+                        <option value="0">No </option>
+                        <option value="1">Not sure </option>
+                        <option value="2">Yes (50%)</option>
+                        <option value="3">Yes (100%) </option>
+                    </select>
+                </td>
+                <td><input type="text" id="q10score" name="q10score" readonly></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Has he/she reviewed the documentation of the property?</td>
+                <td>
+                    <select id="q11rating" name="q11rating" onchange="calculateScore()">
+                        <option value="0">No </option>
+                        <option value="1">Not sure </option>
+                        <option value="2">Yes (50%)</option>
+                        <option value="3">Yes (100%) </option>
+                    </select>
+                </td>
+                <td><input type="text" id="q11score" name="q11score" readonly></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Did he make any effort to verify the documentation?</td>
+                <td>
+                    <select id="q12rating" name="q12rating" onchange="calculateScore()">
+                        <option value="0">No </option>
+                        <option value="1">Not sure </option>
+                        <option value="2">Yes (50%)</option>
+                        <option value="3">Yes (100%) </option>
+                    </select>
+                </td>
+                <td><input type="text" id="q12score" name="q12score" readonly></td>
+            </tr>
+            <tr>
+                <td colspan="3" class="total-row">Total for Client Trust in Product:</td>
+                <td><input type="text" id="totalProduct" name="totalProduct" readonly></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Client Trust in the Company -->
+    <p class="section-heading">CLIENT TRUST IN THE COMPANY</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Prospecting Stages</th>
+                <th>Assessment Questions</th>
+                <th>Self Rating</th>
+                <th>Self Score</th>
+            </tr>
+        </thead>
+        <tbody id="companyTable">
+            <!-- Question Rows -->
+            <tr>
+                <td>1</td>
+                <td>Does the client trust the company?</td>
+                <td>
+                    <select id="q13rating" name="q13rating" onchange="calculateScore()">
+                        <option value="0">No </option>
+                        <option value="1">Not sure </option>
+                        <option value="2">Yes (50%)</option>
+                        <option value="3">Yes (100%) </option>
+                    </select>
+                </td>
+                <td><input type="text" id="q13score" name="q13score" readonly></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Did the client hear about the company from usual sources?</td>
+                <td>
+                    <select id="q14rating" name="q14rating" onchange="calculateScore()">
+                        <option value="0">No </option>
+                        <option value="1">Not sure </option>
+                        <option value="2">Yes (50%)</option>
+                        <option value="3">Yes (100%) </option>
+                    </select>
+                </td>
+                <td><input type="text" id="q14score" name="q14score" readonly></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Has he/she met with the CEO?</td>
+                <td>
+                    <select id="q15rating" name="q15rating" onchange="calculateScore()">
+                        <option value="0">No </option>
+                        <option value="1">Not sure </option>
+                        <option value="2">Yes (50%)</option>
+                        <option value="3">Yes (100%) </option>
+                    </select>
+                </td>
+                <td><input type="text" id="q15score" name="q15score" readonly></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Has he/she visited the office?</td>
+                <td>
+                    <select id="q16rating" name="q16rating" onchange="calculateScore()">
+                        <option value="0">No </option>
+                        <option value="1">Not sure </option>
+                        <option value="2">Yes (50%)</option>
+                        <option value="3">Yes (100%) </option>
+                    </select>
+                </td>
+                <td><input type="text" id="q16score" name="q16score" readonly></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Has he/she engaged any satisfied customer?</td>
+                <td>
+                    <select id="q17rating" name="q17rating" onchange="calculateScore()">
+                        <option value="0">No </option>
+                        <option value="1">Not sure </option>
+                        <option value="2">Yes (50%)</option>
+                        <option value="3">Yes (100%) </option>
+                    </select>
+                </td>
+                <td><input type="text" id="q17score" name="q17score" readonly></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Has he/she filled and submitted the forms?</td>
+                <td>
+                    <select id="q18rating" name="q18rating" onchange="calculateScore()">
+                        <option value="0">No </option>
+                        <option value="1">Not sure </option>
+                        <option value="2">Yes (50%)</option>
+                        <option value="3">Yes (100%) </option>
+                    </select>
+                </td>
+                <td><input type="text" id="q18score" name="q18score" readonly></td>
+            </tr>
+            <tr>
+                <td colspan="3" class="total-row">Total for Client Trust in Company:</td>
+                <td><input type="text" id="totalCompany" name="totalCompany" readonly></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Client Action Threshold -->
+    <p class="section-heading">CLIENT ACTION THRESHOLD</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Prospecting Stages</th>
+                <th>Assessment Questions</th>
+                <th>Self Rating</th>
+                <th>Self Score</th>
+            </tr>
+        </thead>
+        <tbody id="actionTable">
+            <!-- Question Rows -->
+            <tr>
+                <td>1</td>
+                <td>Do you know the steps the client took to buy his/her phone or car or house?</td>
+                <td>
+                    <select id="q19rating" name="q19rating" onchange="calculateScore()">
+                        <option value="0">No </option>
+                        <option value="1">Not sure </option>
+                        <option value="2">Yes (50%)</option>
+                        <option value="3">Yes (100%) </option>
+                    </select>
+                </td>
+                <td><input type="text" id="q19score" name="q19score" readonly></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Do you know why the client attends his church branch or mosque?</td>
+                <td>
+                    <select id="q20rating" name="q20rating" onchange="calculateScore()">
+                        <option value="0">No </option>
+                        <option value="1">Not sure </option>
+                        <option value="2">Yes (50%)</option>
+                        <option value="3">Yes (100%) </option>
+                    </select>
+                </td>
+                <td><input type="text" id="q20score" name="q20score" readonly></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Do you know who the client will consult before buying an important asset?</td>
+                <td>
+                    <select id="q21rating" name="q21rating" onchange="calculateScore()">
+                        <option value="0">No </option>
+                        <option value="1">Not sure </option>
+                        <option value="2">Yes (50%)</option>
+                        <option value="3">Yes (100%) </option>
+                    </select>
+                </td>
+                <td><input type="text" id="q21score" name="q21score" readonly></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Has the client told you the time period he/she will make the payment?</td>
+                <td>
+                    <select id="q22rating" name="q22rating" onchange="calculateScore()">
+                        <option value="0">No </option>
+                        <option value="1">Not sure </option>
+                        <option value="2">Yes (50%)</option>
+                        <option value="3">Yes (100%) </option>
+                    </select>
+                </td>
+                <td><input type="text" id="q22score" name="q22score" readonly></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Have you addressed all the client's objections?</td>
+                <td>
+                    <select id="q23rating" name="q23rating" onchange="calculateScore()">
+                        <option value="0">No </option>
+                        <option value="1">Not sure </option>
+                        <option value="2">Yes (50%)</option>
+                        <option value="3">Yes (100%) </option>
+                    </select>
+                </td>
+                <td><input type="text" id="q23score" name="q23score" readonly></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Has the client requested for account details?</td>
+                <td>
+                    <select id="q24rating" name="q24rating" onchange="calculateScore()">
+                        <option value="0">No </option>
+                        <option value="1">Not sure </option>
+                        <option value="2">Yes (50%)</option>
+                        <option value="3">Yes (100%) </option>
+                    </select>
+                </td>
+                <td><input type="text" id="q24score" name="q24score" readonly></td>
+            </tr>
+            <tr>
+                <td colspan="3" class="total-row">Total for Client Action Threshold:</td>
+                <td><input type="text" id="totalAction" name="totalAction" readonly></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Client Pain/Pleasure Threshold -->
+    <p class="section-heading">CLIENT PAIN/PLEASURE THRESHOLD</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Prospecting Stages</th>
+                <th>Assessment Questions</th>
+                <th>Self Rating</th>
+                <th>Self Score</th>
+            </tr>
+        </thead>
+        <tbody id="painPleasureTable">
+            <!-- Question Rows -->
+            <tr>
+                <td>1</td>
+                <td>Has the client had any real estate transactions that went wrong?</td>
+                <td>
+                    <select id="q25rating" name="q25rating" onchange="calculateScore()">
+                        <option value="0">No </option>
+                        <option value="1">Not sure </option>
+                        <option value="2">Yes (50%)</option>
+                        <option value="3">Yes (100%) </option>
+                    </select>
+                </td>
+                <td><input type="text" id="q25score" name="q25score" readonly></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Has the client earned any revenues from a real investment?</td>
+                <td>
+                    <select id="q26rating" name="q26rating" onchange="calculateScore()">
+                        <option value="0">No </option>
+                        <option value="1">Not sure </option>
+                        <option value="2">Yes (50%)</option>
+                        <option value="3">Yes (100%) </option>
+                    </select>
+                </td>
+                <td><input type="text" id="q26score" name="q26score" readonly></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Has the client been cheated by a real estate company in the past?</td>
+                <td>
+                    <select id="q27rating" name="q27rating" onchange="calculateScore()">
+                        <option value="0">No </option>
+                        <option value="1">Not sure </option>
+                        <option value="2">Yes (50%)</option>
+                        <option value="3">Yes (100%) </option>
+                    </select>
+                </td>
+                <td><input type="text" id="q27score" name="q27score" readonly></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>What does the client fear the most? Do you know?</td>
+                <td>
+                    <select id="q28rating" name="q28rating" onchange="calculateScore()">
+                        <option value="0">No </option>
+                        <option value="1">Not sure </option>
+                        <option value="2">Yes (50%)</option>
+                        <option value="3">Yes (100%) </option>
+                    </select>
+                </td>
+                <td><input type="text" id="q28score" name="q28score" readonly></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Do you know at least one reason the client is buying the land?</td>
+                <td>
+                    <select id="q29rating" name="q29rating" onchange="calculateScore()">
+                        <option value="0">No </option>
+                        <option value="1">Not sure </option>
+                        <option value="2">Yes (50%)</option>
+                        <option value="3">Yes (100%) </option>
+                    </select>
+                </td>
+                <td><input type="text" id="q29score" name="q29score" readonly></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Are you still confident the client will buy from you at this time?</td>
+                <td>
+                    <select id="q30rating" name="q30rating" onchange="calculateScore()">
+                        <option value="0">No </option>
+                        <option value="1">Not sure </option>
+                        <option value="2">Yes (50%)</option>
+                        <option value="3">Yes (100%) </option>
+                    </select>
+                </td>
+                <td><input type="text" id="q30score" name="q30score" readonly></td>
+            </tr>
+            <tr>
+                <td colspan="3" class="total-row">Total for Client Pain/Pleasure Threshold:</td>
+                <td><input type="text" id="totalPainPleasure" name="totalPainPleasure" readonly></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Final Calculation -->
+    <p class="section-heading">FINAL CALCULATION</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Total Score</th>
+                <th>Recommendation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text" id="finalScore" name="finalScore" readonly></td>
+                <td><input type="text" id="recommendation" name="recommendation" class="recommend" readonly></td>
+            </tr>
+        </tbody>
+    </table>
+
+<script src="./script.js"></script>
+
+
+</body>
+</html>
