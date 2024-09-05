@@ -84,7 +84,7 @@ function generateRecommendation(finalScore) {
     } else if (finalScore >= 12) {
         recommendation = "ClIENT MAY LIKELY BUY";
     } else if (finalScore >= 10) {
-        recommendation = "CLIENT NEEDS MORE PERSPECTING";
+        recommendation = "CLIENT NEEDS MORE PROSPECTING";
     } else if (finalScore <= 9) {
         recommendation = "CLIENT WILL NOT BUY";
     } else {
