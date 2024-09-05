@@ -110,6 +110,7 @@ table{
    color: rgb(57, 46, 46);
 }
 .recommend{
+    width: 20rem;
     border: none;
 }
 input{
@@ -186,6 +187,10 @@ body {
     .section-heading {
         display: block;
         width: 100%;
+    }
+    .recommend{
+        width: 15rem;
+        font-size: 11px;
     }
 
     .top-header-right img {
