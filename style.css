@@ -229,6 +229,15 @@ body {
         font-size: 12px;
      }
 }
+@media screen and (min-width: 375px) {
+    select{
+       margin-left: -0.5rem;
+       width: 2.8rem;
+    }
+
+
+
+}
 
 
 

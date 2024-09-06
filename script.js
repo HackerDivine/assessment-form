@@ -83,12 +83,10 @@ function generateRecommendation(finalScore) {
         recommendation = "CLIENT WILL DEFINETLY BUY";
     } else if (finalScore >= 12) {
         recommendation = "ClIENT MAY LIKELY BUY";
-    } else if (finalScore >= 10) {
+    } else if (finalScore > 10) {
         recommendation = "CLIENT NEEDS MORE PROSPECTING";
-    } else if (finalScore <= 9) {
+    } else  if(finalScore <= 10) {
         recommendation = "CLIENT WILL NOT BUY";
-    } else {
-        recommendation = "PASS";
     }
     document.getElementById('recommendation').value = recommendation;
 }

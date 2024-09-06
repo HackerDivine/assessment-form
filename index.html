@@ -18,7 +18,7 @@
             <br><br>
             <label for="date">Date:</label>
             <input type="date" id="date" name="date" class="date">
-            <p>Pick the correct option from the drop down under "MARKETER RATING" and discuss the outcome of each stage with your UNIT MANAGER for next steps.</p>
+            <p>Pick the correct option from the drop down under "SELF RATING" and discuss the outcome of each stage with your UNIT MANAGER for next steps.</p>
     
          </div>
          <div class="top-header-right">
@@ -56,7 +56,7 @@
             </tr>
             <tr>
                 <td>2</td>
-                <td>Is the client married?</td>
+                <td>Do you know the client's marital status?</td>
                 <td>
                     <select id="q2rating" name="q2rating" onchange="calculateScore()">
                         <option value="0">No </option>
@@ -120,7 +120,7 @@
                 <td><input type="text" id="q6score" name="q6score" readonly></td>
             </tr>
             <tr>
-                <td colspan="3" class="total-row">Total for CLIENT TRUST IN THE REAL ESTATE ADVISOR:</td>
+                <td colspan="3" class="total-row">Total for Client Trust in the Real Estate Advisor:</td>
                 <td><input type="text" id="totalAdvisor" name="totalAdvisor" readonly></td>
             </tr>
         </tbody>
@@ -435,7 +435,7 @@
             <!-- Question Rows -->
             <tr>
                 <td>1</td>
-                <td>Has the client had any real estate transactions that went wrong?</td>
+                <td class="qs">Do you know if the client has had any real estate deals that went wrong?</td>
                 <td>
                     <select id="q25rating" name="q25rating" onchange="calculateScore()">
                         <option value="0">No </option>
@@ -448,7 +448,7 @@
             </tr>
             <tr>
                 <td>2</td>
-                <td>Has the client earned any revenues from a real investment?</td>
+                <td class="qs">Do you know if the client has earned any revenues from a real investment?</td>
                 <td>
                     <select id="q26rating" name="q26rating" onchange="calculateScore()">
                         <option value="0">No </option>
@@ -461,7 +461,7 @@
             </tr>
             <tr>
                 <td>3</td>
-                <td>Has the client been cheated by a real estate company in the past?</td>
+                <td class="qs">Do you know if the client has been cheated by a real estate company in the past?</td>
                 <td>
                     <select id="q27rating" name="q27rating" onchange="calculateScore()">
                         <option value="0">No </option>
@@ -474,7 +474,7 @@
             </tr>
             <tr>
                 <td>4</td>
-                <td>What does the client fear the most? Do you know?</td>
+                <td class="qs">What does the client fear the most? Do you know?</td>
                 <td>
                     <select id="q28rating" name="q28rating" onchange="calculateScore()">
                         <option value="0">No </option>
@@ -487,7 +487,7 @@
             </tr>
             <tr>
                 <td>5</td>
-                <td>Do you know at least one reason the client is buying the land?</td>
+                <td class="qs">Do you know at least one reason the client is buying the land?</td>
                 <td>
                     <select id="q29rating" name="q29rating" onchange="calculateScore()">
                         <option value="0">No </option>
@@ -500,7 +500,7 @@
             </tr>
             <tr>
                 <td>6</td>
-                <td>Are you still confident the client will buy from you at this time?</td>
+                <td class="qs">Are you still confident the client will buy from you at this time?</td>
                 <td>
                     <select id="q30rating" name="q30rating" onchange="calculateScore()">
                         <option value="0">No </option>
